@@ -3,9 +3,9 @@
 
     inputs = {};
 
-    outputs = {
+    outputs = { ... }: {
         nixosModules = {
-            dragon-bot = { config, pkgs, lib, ... }: {
+            dragon-bot = { ... }: {
                 imports = [ ./dragon-bot.nix ];
             };
         };
