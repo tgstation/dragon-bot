@@ -5,7 +5,7 @@
 
     outputs = { ... }: {
         nixosModules = {
-            dragon-bot = { ... }: {
+            default = { ... }: {
                 imports = [ ./dragon-bot.nix ];
             };
         };
