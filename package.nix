@@ -29,9 +29,8 @@ in stdenv.mkDerivation {
         cargo test --release
     '';
 
-    # mv ./dragon-bot/build/release/dragon-bot $out/bin/dragon-bot
     installPhase = ''
         mkdir -p $out/bin
-        touch $out/bin/dragon-bot
+        mv ./dragon-bot/build/release/dragon-bot $out/bin/dragon-bot
     '';
 }
