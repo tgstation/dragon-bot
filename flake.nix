@@ -9,5 +9,5 @@
                 imports = [ ./dragon-bot.nix ];
             };
         };
-    }
-};
+    };
+}
