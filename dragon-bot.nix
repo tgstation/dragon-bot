@@ -41,7 +41,7 @@ in {
         ExecStart = "${package}/bin/dragon-bot";
         Restart = "always";
         KillMode = "process";
-        ReloadSignal = "SIGUSR2";
+        KillSignal = "SIGKILL";
       };
       wantedBy = [ "multi-user.target" ];
     };
