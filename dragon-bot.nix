@@ -40,8 +40,8 @@ in {
         WorkingDirectory = "${package}";
         ExecStart = "${package}/bin/dragon-bot";
         Restart = "always";
-        KillMode = "process";
-        KillSignal = "SIGKILL";
+        KillMode = "control-group";
+        KillSignal = "KILL";
       };
       wantedBy = [ "multi-user.target" ];
     };
