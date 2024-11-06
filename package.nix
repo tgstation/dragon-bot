@@ -31,6 +31,6 @@ in stdenv.mkDerivation {
 
     installPhase = ''
         mkdir -p $out/bin
-        mv ./dragon-bot/build/release/dragon-bot $out/bin/dragon-bot
+        mv ./dragon-bot/target/release/dragon-bot $out/bin/dragon-bot
     '';
 }
