@@ -14,6 +14,9 @@ rustPlatform.buildRustPackage rec {
     in {
         lockFileContents = fixupLockFile ./Cargo.lock;
     };
+    postPatch = ''
+        ln -s ${./Cargo.lock} Cargo.lock
+    '';
     meta = {
         description = "A Discord bot for the /tg/station Discord server.";
         license = lib.licenses.mit;
