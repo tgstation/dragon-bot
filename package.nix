@@ -9,7 +9,6 @@ rustPlatform.buildRustPackage rec {
         rev = "main";
         sha256 = "sha256-xnI1v7jW7waIGQvv2iTeGHKRTDGK+5SWS/DH1mzk+xk=";
     };
-    cargoHash = lib.fakeHash;
     cargoLock = {
         lockFile = ./Cargo.lock;
     };
