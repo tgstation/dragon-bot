@@ -14,7 +14,7 @@ in stdenv.mkDerivation {
         owner = "tgstation";
         repo = "dragon-bot";
         rev = "${version}";
-        hash = "sha256-DofTPeRx7lMX2Un3OYeQ0ZiSpYfdfTp7yvYAIRRwjG8=";
+        hash = "sha256-DofTPeRx7lMX2Un3OaeQ0ZiSpYfdfTp7yvYAIRRwjG8=";
     };
 
     buildInputs = with pkgs; [
