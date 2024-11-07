@@ -10,7 +10,9 @@ rustPlatform.buildRustPackage rec {
         sha256 = "sha256-xnI1v7jW7waIGQvv2iTeGHKRTDGK+5SWS/DH1mzk+xk=";
     };
     cargoHash = lib.fakeHash;
-    cargoPatches = [ ./add-Cargo.lock.patch ];
+    cargoLock = {
+        lockFile = ./Cargo.lock;
+    };
     meta = {
         description = "A Discord bot for the /tg/station Discord server.";
         license = lib.licenses.mit;
