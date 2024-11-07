@@ -9,11 +9,7 @@ rustPlatform.buildRustPackage rec {
         rev = "main";
         sha256 = "sha256-xnI1v7jW7waIGQvv2iTeGHKRTDGK+5SWS/DH1mzk+xk=";
     };
-    cargoLock = let
-        fixupLockFile = path: f (builtins.readFile path);
-    in {
-        lockFileContents = fixupLockFile ./Cargo.lock;
-    };
+    cargoLock = ./Cargo.lock;
     postPatch = ''
         ln -s ${./Cargo.lock} Cargo.lock
     '';
