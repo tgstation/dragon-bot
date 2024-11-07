@@ -13,5 +13,5 @@ rustPlatform.buildRustPackage rec {
     meta = {
         description = "A Discord bot for the /tg/station Discord server.";
         license = lib.licenses.mit;
-    }
+    };
 }
