@@ -1,4 +1,4 @@
-{ pkgs, stdenv, config, lib, fetchFromGitHub, ... }:
+{ lib, fetchFromGitHub, rustPlatform, ... }:
 
 rustPlatform.buildRustPackage rec {
     pname = "dragon-bot";
