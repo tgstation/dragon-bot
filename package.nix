@@ -9,8 +9,10 @@ rustPlatform.buildRustPackage rec {
         rev = "main";
         sha256 = "sha256-xnI1v7jW7waIGQvv2iTeGHKRTDGK+5SWS/DH1mzk+xk=";
     };
-    cargoLock = {
-        lockFile = ./Cargo.lock;
+    cargoLock = let
+        fixupLockFile = path: f (builtins.readFile path);
+    in {
+        lockFileContents = fixupLockFile ./Cargo.lock;
     };
     meta = {
         description = "A Discord bot for the /tg/station Discord server.";
